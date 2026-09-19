@@ -1,36 +1,29 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Ilham Sikumbang — portfolio
 
-## Getting Started
+A static professional portfolio built with Next.js 16, React 19, TypeScript, and Tailwind CSS 4. Public pages are server-rendered and prerendered at build time.
 
-First, run the development server:
+## Run locally
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+On Windows PowerShell, use `npm.cmd` if execution policy blocks `npm.ps1`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Update content
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- `content/site.ts`: name and professional links.
+- `content/projects.ts`: manually selected projects, repository links, and case-study copy.
+- `content/profile.ts`: skills, experience, achievements, and CV path.
+- `public/ilham-sikumbang-cv.pdf`: the approved downloadable CV.
 
-## Learn More
+The LSP E-Ticketing project links directly to its repository until there is enough verified detail for a case study. Add project screenshots or hardware photos only when approved assets are available.
 
-To learn more about Next.js, take a look at the following resources:
+## Deploy and analytics
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Vercel is the intended host. Set `NEXT_PUBLIC_SITE_URL` to the production domain if you use a custom domain; otherwise the site uses Vercel's production URL for canonical metadata and the sitemap.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+The site is prepared for a private Umami Cloud dashboard. Create a website in Umami, keep its dashboard private, and set `NEXT_PUBLIC_UMAMI_WEBSITE_ID` in the Vercel project environment. The tracker then records page visits and the annotated LinkedIn, GitHub, and CV clicks. The value is a public website identifier, not a secret. No tracker loads when it is unset.
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Run `npm run lint` and `npm run build` before deployment. Check the profile destinations, case-study repositories, CV download, mobile navigation, and Umami dashboard after deployment.
