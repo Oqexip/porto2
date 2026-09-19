@@ -2,6 +2,8 @@
 
 A static professional portfolio built with Next.js 16, React 19, TypeScript, and Tailwind CSS 4. Public pages are server-rendered and prerendered at build time.
 
+The visual direction adapts [Izaditya](https://izaditya.vercel.app/) with Ilham's own portrait, content, and project evidence.
+
 ## Run locally
 
 ```bash
@@ -17,6 +19,7 @@ On Windows PowerShell, use `npm.cmd` if execution policy blocks `npm.ps1`.
 - `content/projects.ts`: manually selected projects, repository links, and case-study copy.
 - `content/profile.ts`: skills, experience, achievements, and CV path.
 - `public/ilham-sikumbang-cv.pdf`: the approved downloadable CV.
+- `public/images/ilham-portrait.png`: Ilham's supplied portrait.
 
 The LSP E-Ticketing project links directly to its repository until there is enough verified detail for a case study. Add project screenshots or hardware photos only when approved assets are available.
 

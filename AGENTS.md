@@ -88,7 +88,7 @@ Treat the portfolio as an edited record of Ilham's real work. The intended impre
 
 Proposed positioning line: **"Building software for the web and the physical world."** Use it as a concise statement of direction, not as proof of completed projects. A supporting introduction can identify Ilham as an Electrical Engineering student at Universitas Gadjah Mada working across software and electronics. Refine the wording once his selected work is available.
 
-Ilham's visual reference pool is [Priyo Adi Wibowo](https://amblackpearl.github.io/portofolio/), [Haisyam](https://haisyam.dev/), [Rarizuki](https://rarizuki.my.id/), [Izaditya](https://izaditya.vercel.app/), [Sampm092](https://sampm092.github.io/), and [Ookamiiixd](https://ookamiiixd.dev/). Use these as directional references for clear navigation, personal introduction, skills, and selected work; do not copy layouts, imagery, wording, or branding. The color palette is a design choice, not an existing Ilham brand requirement.
+Use only [Izaditya](https://izaditya.vercel.app/) as the visual reference for Porto. Adapt its dark presentation, floating navigation, expressive typography, project list, and experience timeline to Ilham's verified content; do not copy its imagery, wording, or branding. The color palette remains a design choice, not an existing Ilham brand requirement.
 
 ### Anti AI slop principles
 
@@ -101,23 +101,22 @@ Ilham's visual reference pool is [Priyo Adi Wibowo](https://amblackpearl.github.
 
 ### Theme and color
 
-Use a calm light theme by default and support the user's system dark preference. If a manual theme switch is added, make it accessible and persist the choice. Ilham has not specified brand colors, so these are **proposed tokens** to refine against real project images and check for contrast before implementation:
+Use a dark theme as the primary presentation to follow the sole Izaditya reference. Ilham has not specified brand colors, so these are design tokens that can be refined against real project images:
 
-| Token | Light | Dark | Use |
-| --- | --- | --- | --- |
-| Canvas | `#F8F6F1` | `#131416` | Page background |
-| Surface | `#FFFFFF` | `#1D1F23` | Media frame or raised surface |
-| Ink | `#16181D` | `#F6F2EB` | Primary text |
-| Muted | `#59616B` | `#B7B7B2` | Supporting text |
-| Rule | `#D5D4CF` | `#393C42` | Dividers and borders |
-| Accent | `#1748C9` | `#8FA8FF` | Links, selected state, and focus |
-| Error | `#A3321D` | `#FF9A86` | Error feedback if needed |
+| Token | Value | Use |
+| --- | --- | --- |
+| Canvas | `#0B0E14` | Page background |
+| Surface | `#141923` | Cards and raised surfaces |
+| Ink | `#F4F6FB` | Primary text |
+| Muted | `#AAB4C3` | Supporting text |
+| Rule | `#303A4A` | Dividers and borders |
+| Accent | `#A8C5E7` | Links, selected state, and focus |
 
 Use accent sparingly. Verify every foreground and background pairing against the required contrast level; a token value alone does not guarantee accessible use.
 
 ### Typography
 
-Use the installed Geist Sans for headings and body text. Reserve Geist Mono for dates, labels, metadata, and code. Do not introduce another font without a brand reason. The current starter registers Geist but sets `body` to Arial; resolve that inconsistency when building the interface.
+Use the installed Geist Sans for headings and body text, Geist Mono for dates and labels, and a restrained serif italic treatment for expressive display words. Do not introduce another font without a brand reason.
 
 - Display headings: bold enough to establish hierarchy, with readable tight tracking and responsive sizes.
 - Body: 16–18 px with approximately 1.55–1.7 line height and a comfortable measure of about 60–70 characters.
@@ -126,9 +125,9 @@ Use the installed Geist Sans for headings and body text. Reserve Geist Mono for 
 
 ### Layout, spacing, and components
 
-Use a 4 px spacing base with purposeful steps: 4, 8, 12, 16, 24, 32, 48, 72, 96, and 144 px. Use a maximum content width around 1200 px, generous section spacing, and 16–20 px mobile gutters. A 12-column desktop and 4-column mobile grid may guide alignment, but content takes priority over rigid symmetry. Keep related content close, use 1 px rules where useful, and prefer 0–8 px corner radii over pill-shaped controls everywhere.
+Use a 4 px spacing base with purposeful steps: 4, 8, 12, 16, 24, 32, 48, 72, 96, and 144 px. Use a maximum content width around 1200 px, generous section spacing, and 16–20 px mobile gutters. A 12-column desktop and 4-column mobile grid may guide alignment, but content takes priority over rigid symmetry. Use a floating pill navigation and restrained rounded surfaces as adapted from the reference.
 
-The home page should move from introduction to selected work, skills, about, education, experience, achievements, CV, and a final LinkedIn action. All requested sections belong in the published site. Keep their content concise and evidence-based, with more weight given to selected work than long tool lists. On project pages, place the project context and actual artifacts before decorative presentation.
+The home page should move from introduction to about, selected work, experience, education, skills, achievements, CV, and a final LinkedIn action. All requested sections belong in the published site. Keep their content concise and evidence-based, with more weight given to selected work than long tool lists. On project pages, place the project context and actual artifacts before decorative presentation.
 
 ### Accessibility and inclusive interaction
 

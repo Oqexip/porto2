@@ -21,22 +21,41 @@ export const metadata: Metadata = {
   },
 };
 
+const navigation = [
+  { label: "Home", href: "/#home" },
+  { label: "Work", href: "/#work" },
+  { label: "About", href: "/#about" },
+  { label: "Experience", href: "/#experience" },
+  { label: "Skills", href: "/#skills" },
+];
+
+const mobileNavigation = [
+  ...navigation,
+  { label: "Education", href: "/#education" },
+  { label: "Achievements", href: "/#achievements" },
+  { label: "CV", href: "/#cv" },
+  { label: "Contact", href: "/#contact" },
+];
+
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
       <body>
         <a className="skip-link" href="#main-content">Skip to content</a>
         <header className="site-header">
-          <div className="shell header-inner">
-            <Link className="wordmark" href="/" aria-label="Ilham Sikumbang, home">ILHAM<span>.</span></Link>
-            <nav aria-label="Primary navigation"><Link href="/#work">Work</Link><Link href="/#skills">Skills</Link><Link href="/#about">About</Link><Link href="/#education">Education</Link><Link href="/#experience">Experience</Link><Link href="/#achievements">Achievements</Link><Link href="/#cv">CV</Link></nav>
-            <details className="mobile-nav"><summary>Menu</summary><nav aria-label="Mobile navigation"><Link href="/#work">Work</Link><Link href="/#skills">Skills</Link><Link href="/#about">About</Link><Link href="/#education">Education</Link><Link href="/#experience">Experience</Link><Link href="/#achievements">Achievements</Link><Link href="/#cv">CV</Link></nav></details>
-            <Link className="header-contact" href="/#contact">Let&apos;s connect <span aria-hidden="true">↗</span></Link>
-          </div>
+          <nav className="nav-pill" aria-label="Primary navigation">
+            <Link className="nav-mark" href="/#home" aria-label="Ilham Sikumbang, home">IS<span>.</span></Link>
+            <div className="nav-links">{navigation.map((item) => <Link key={item.href} href={item.href}>{item.label}</Link>)}</div>
+            <a className="nav-contact" href={site.linkedin} target="_blank" rel="noopener noreferrer" data-umami-event="LinkedIn click">Let&apos;s connect <span aria-hidden="true">↗</span></a>
+            <details className="mobile-nav">
+              <summary aria-label="Open navigation menu"><span></span><span></span><span></span></summary>
+              <div className="mobile-nav-panel">{mobileNavigation.map((item) => <Link key={item.href} href={item.href}>{item.label}</Link>)}<a href={site.linkedin} target="_blank" rel="noopener noreferrer" data-umami-event="LinkedIn click">LinkedIn ↗</a><a href={site.github} target="_blank" rel="noopener noreferrer" data-umami-event="GitHub click">GitHub ↗</a></div>
+            </details>
+          </nav>
         </header>
         {children}
         {process.env.NEXT_PUBLIC_UMAMI_WEBSITE_ID && <Script src="https://cloud.umami.is/script.js" data-website-id={process.env.NEXT_PUBLIC_UMAMI_WEBSITE_ID} strategy="afterInteractive" />}
-        <footer className="site-footer"><div className="shell footer-inner"><span>© {new Date().getFullYear()} Ilham Sikumbang</span><div><a href={site.linkedin} target="_blank" rel="noopener noreferrer" data-umami-event="LinkedIn click">LinkedIn ↗</a><a href={site.github} target="_blank" rel="noopener noreferrer" data-umami-event="GitHub click">GitHub ↗</a><Link href="/#main-content">Back to top ↑</Link></div></div></footer>
+        <footer className="site-footer"><div className="shell footer-inner"><span>© {new Date().getFullYear()} Ilham Sikumbang</span><span>Built across software and electronics.</span><div><a href={site.linkedin} target="_blank" rel="noopener noreferrer" data-umami-event="LinkedIn click">LinkedIn ↗</a><a href={site.github} target="_blank" rel="noopener noreferrer" data-umami-event="GitHub click">GitHub ↗</a><Link href="/#home">Back to top ↑</Link></div></div></footer>
       </body>
     </html>
   );
